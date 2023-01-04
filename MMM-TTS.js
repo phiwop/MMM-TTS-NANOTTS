@@ -8,11 +8,11 @@
  * MIT Licensed.
  */
 
-Module.register('MMM-TTS', {
+Module.register('MMM-TTS-NANOTTS', {
     tts: '',
 
     defaults: {
-        text: 'MMM-TTS',
+        text: 'MMM-TTS-NANOTTS',
         voice: null,
         speed: 1.0,
         debug: false
@@ -25,7 +25,7 @@ Module.register('MMM-TTS', {
     },
 
     notificationReceived(notification, payload) {
-        if (notification === 'MMM-TTS') {
+        if (notification === 'MMM-TTS-NANOTTS') {
             this.sendSocketNotification('TTS', payload);
             this.tts = payload;
             this.updateDom();
