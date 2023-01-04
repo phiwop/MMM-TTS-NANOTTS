@@ -1,9 +1,9 @@
 /* global Module Log */
 
 /* Magic Mirror
- * Module: MMM-TTS
+ * Module: MMM-TTS-NANOTTS
  *
- * By fewieden https://github.com/fewieden/MMM-TTS
+ * Original By fewieden https://github.com/fewieden/MMM-TTS
  *
  * MIT Licensed.
  */
@@ -15,7 +15,7 @@ Module.register('MMM-TTS-NANOTTS', {
         text: 'MMM-TTS-NANOTTS',
         voice: null,
         speed: 1.0,
-        debug: false
+        debug: true
     },
 
     start() {
@@ -26,6 +26,7 @@ Module.register('MMM-TTS-NANOTTS', {
 
     notificationReceived(notification, payload) {
         if (notification === 'MMM-TTS-NANOTTS') {
+            console.log("Speak Command TTS:"+payload)
             this.sendSocketNotification('TTS', payload);
             this.tts = payload;
             this.updateDom();

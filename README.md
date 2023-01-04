@@ -40,4 +40,4 @@ Text-To-Speech Module for MagicMirror<sup>2</sup> with NanoTTS
 
 ## For Developers
 
-To use MMM-TTS in your module you have to send a socket notification like this `this.sendNotification('MMM-TTS', 'This is a text to read. Hello World!');`.
+To use MMM-TTS-NANOTTS in your module you have to send a socket notification like this `this.sendNotification('MMM-TTS-NANOTTS', 'This is a text to read. Hello World!');`.
