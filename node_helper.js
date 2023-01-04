@@ -9,7 +9,6 @@
 /* eslint-env node */
 
 const NodeHelper = require('node_helper');
-const tts = require('say');
 const exec = require('child_process').exec;
 
 module.exports = NodeHelper.create({
