@@ -26,7 +26,6 @@ Module.register('MMM-TTS-NANOTTS', {
 
     notificationReceived(notification, payload) {
         if (notification === 'MMM-TTS-NANOTTS') {
-            console.log("Speak Command TTS:"+payload)
             this.sendSocketNotification('TTS', payload);
             this.tts = payload;
             this.updateDom();

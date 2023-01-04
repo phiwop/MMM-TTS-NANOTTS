@@ -21,7 +21,6 @@ module.exports = NodeHelper.create({
         if (notification === 'CONFIG') {
             this.config = payload;
         } else if (notification === 'TTS') {
-            console.log("Speak:"+payload)
             exec("echo '"+payload+"' | sudo nanotts --play -v de-DE --speed 0.8 --pitch 1.0 --volume 0.3 ", (err, stdout, stderr) => {
               if (err) {
                 console.error(err);
