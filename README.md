@@ -1,13 +1,12 @@
 # MMM-TTS [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/fewieden/MMM-TTS/master/LICENSE) [![Build Status](https://travis-ci.org/fewieden/MMM-TTS.svg?branch=master)](https://travis-ci.org/fewieden/MMM-TTS) [![Code Climate](https://codeclimate.com/github/fewieden/MMM-TTS/badges/gpa.svg?style=flat)](https://codeclimate.com/github/fewieden/MMM-TTS) [![Known Vulnerabilities](https://snyk.io/test/github/fewieden/mmm-tts/badge.svg)](https://snyk.io/test/github/fewieden/mmm-tts)
 
-Text-To-Speech Module for MagicMirror<sup>2</sup>
+Text-To-Speech Module for MagicMirror<sup>2</sup> with NanoTTS
 
 ## Dependencies
 
 * An installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
 * npm
-* [say](https://www.npmjs.com/package/say)
-* [festival](http://www.cstr.ed.ac.uk/projects/festival/)
+* NanoTTS Engine
 
 ## Installation
 
@@ -16,7 +15,7 @@ Text-To-Speech Module for MagicMirror<sup>2</sup>
 
     ```
     {
-        module: 'MMM-TTS',
+        module: 'MMM-TTS-NANOTTS',
         position: 'top_right',
         config: {
             ...
@@ -24,8 +23,11 @@ Text-To-Speech Module for MagicMirror<sup>2</sup>
     }
     ```
 
-1. Run command `npm install` in `~/MagicMirror/modules/MMM-TTS` directory.
-1. Run command `sudo apt-get install festival`.
+1. Run command `npm install` in `~/MagicMirror/modules/MMM-TTS-NANOTTS` directory.
+1. Clone NanoTTS Git where you want `git clone https://github.com/gmn/nanotts.git`.
+1. Change directory `cd nanotts` directory.
+1. Run command `make`.
+1. Run command `make install`.
 
 ## Config Options
 
